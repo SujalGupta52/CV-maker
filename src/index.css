@@ -19,7 +19,7 @@ html, body {
 }
 
 .preview .page {
-    min-width: 8.3in;
+    width: 8.3in;
     min-height: 11.69in;
     background-color: white;
 }
@@ -92,7 +92,6 @@ html, body {
     }
 
     .page {
-        height: 100%;
         width: 100%;
     }
 }
