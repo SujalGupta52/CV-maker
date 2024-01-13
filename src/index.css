@@ -13,15 +13,20 @@ html, body {
 
 .preview {
     overflow-y: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    padding: 8px;
 }
 
 .preview .page {
+    position: relative;
     width: 8.3in;
-    min-height: 11.69in;
+    height: auto;
+    aspect-ratio: 8.3/11.69;
     background-color: white;
+    justify-self: center;
+    align-self: auto;
+    box-shadow: 0px 0px 19px 1px #666666;
 }
 
 .editor {
@@ -85,6 +90,11 @@ html, body {
     #root {
         grid-template-columns: 1fr;
         background-color: white;
+    }
+
+    .preview {
+        padding: 0;
+        overflow: visible;
     }
 
     .editor {
