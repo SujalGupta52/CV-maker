@@ -1,12 +1,13 @@
 import Editor from "./Editor";
 import Preview from "./Preview";
-import "../index.css";
+import { useState } from "react";
 
 export default function App() {
-    const isMobile = window.innerWidth < 600;
+    const [personalInfo, setPersonalInfo] = useState({name:'', dob: '', email: '', phone: '', address: '', github: ''})
     return(
         <>
-        {isMobile ? <Editor /> : <><Editor /><Preview /></>}
+        <Editor info={personalInfo} setInfo={setPersonalInfo}/>
+        <Preview info={personalInfo}/>
         </>
     )
 }

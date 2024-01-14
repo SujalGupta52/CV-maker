@@ -1,0 +1,92 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: start;
+  overflow-y: auto;
+  padding: 36px;
+  background-color: rgb(216, 235, 255);
+}
+
+.section {
+  border-radius: 20px;
+}
+
+.section .title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: rgb(95, 140, 255);
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.section .dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 10px;
+  transform-origin: top;
+  animation: scale 0.5s;
+}
+
+.section .dropdown div {
+  background-color: rgb(140, 140, 248);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.section .dropdown.hidden {
+    display: none;
+}
+
+@keyframes scale {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+
+.section label {
+  font-weight: bold;
+  font-size: large;
+  color: rgb(38, 38, 38);
+}
+
+.section input {
+  flex: 1;
+  height: 2rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding-left: 1rem;
+  background-color: rgb(242, 253, 255);
+  color: rgb(12, 12, 12);
+  font-size: 1rem;
+}
+
+.section input:focus {
+  outline: none;
+  outline: 2px solid rgb(72, 0, 255);
+}
+
+.print-btn {
+  min-height: 2rem;
+  width: 80%;
+  margin-left: 10%;
+  background: rgb(255, 48, 69);
+  border: 1px solid rgb(0, 38, 255);
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}

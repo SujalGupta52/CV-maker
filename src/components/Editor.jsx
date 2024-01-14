@@ -1,12 +1,10 @@
-import Section from "./Section"
+import PersonalInfo from "./PersonalInfo";
+import "../style/editor.css"
 
-export default function Editor() {
+export default function Editor({info, setInfo}) {
     return (
       <div className="editor">
-        <Section />
-        <Section />
-        <Section />
-        <Section />
+        <PersonalInfo info={info} setInfo= {setInfo}/>
         <button className="print-btn" onClick={() => print()}>Print</button>
       </div>
     );

@@ -7,81 +7,8 @@ html, body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(500px, 1fr) 2fr;
     background-color: rgb(221, 244, 255);
-}
-
-.preview {
-    overflow-y: auto;
-    display: grid;
-    grid-template: 1fr / 1fr;
-    padding: 8px;
-}
-
-.preview .page {
-    position: relative;
-    width: 8.3in;
-    height: auto;
-    aspect-ratio: 8.3/11.69;
-    background-color: white;
-    justify-self: center;
-    align-self: auto;
-    box-shadow: 0px 0px 19px 1px #666666;
-}
-
-.editor {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: start;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 36px;
-    background-color: rgb(170, 211, 255);
-}
-
-.section {
-    display: flex;
-    flex-direction: column;
-}
-
-.section .title {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.section label {
-    font-weight: bold;
-    font-size: large;
-    color: rgb(38, 38, 38);
-    padding-top: 8px;
-}
-
-.section input {
-    height: 2rem;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    padding-left: 1rem;
-    background-color: rgb(242, 253, 255);
-    color: rgb(12, 12, 12);
-    font-size: 1rem;
-}
-
-.section input:focus {
-    outline: none;
-    outline: 2px solid rgb(72, 0, 255);
-}
-
-.print-btn {
-    min-height: 2rem;
-    width: 80%;
-    margin-left: 10%;
-    background: rgb(255, 48, 69);
-    border: 1px solid rgb(0, 38, 255);
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
 }
 
 @media print {

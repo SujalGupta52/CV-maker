@@ -1,0 +1,58 @@
+.preview {
+    overflow-y: auto;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    padding: 8px;
+}
+
+.page {
+    width: 8.3in;
+    height: auto;
+    aspect-ratio: 8.3/11.69;
+    background-color: white;
+    justify-self: center;
+    align-self: auto;
+    box-shadow: 0px 0px 19px 1px #666666;
+    padding: 90px 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page .name {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.page .info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+@media print {
+    @page { size: A4;  margin: 0mm; }
+
+    #root {
+        grid-template-columns: 1fr;
+        background-color: white;
+    }
+
+    .preview {
+        overflow: visible;
+        padding: 0;
+    }
+
+    .editor {
+        display: none;
+    }
+
+    .page {
+        height: 100%;
+        box-shadow: none;
+    }
+}
+
