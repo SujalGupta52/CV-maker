@@ -25,7 +25,7 @@
   user-select: none;
 }
 
-.section .dropdown {
+.dropdown {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -34,14 +34,17 @@
   animation: scale 0.5s;
 }
 
-.section .dropdown div {
+.dropdown div {
   background-color: rgb(140, 140, 248);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.dropdown div.personal-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 8px;
-  border-radius: 10px;
 }
 
 .section .dropdown.hidden {
@@ -65,6 +68,7 @@
 }
 
 .section input {
+  min-width: 0;
   flex: 1;
   height: 2rem;
   border: 1px solid rgb(0, 0, 0);
@@ -90,4 +94,27 @@
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+div.edu-info {
+  display: flex;
+  flex-direction: column;
+} 
+
+div.edu-info div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button.add-item {
+  height: 30px;
+  background-color: rgb(157, 255, 0);
+  border: 1px solid green;
+  border-radius: 10px;
+}
+
+.section textarea {
+  height: 60px;
+  width: 250px;
 }
