@@ -42,7 +42,7 @@ export default function PersonalInfo({ info, setInfo }) {
           <input
             type="text"
             placeholder="+91 987654321"
-            id="name"
+            id="phone"
             onChange={(e) => setInfo({ ...info, phone: e.target.value })}
             value={info.phone}
           />
